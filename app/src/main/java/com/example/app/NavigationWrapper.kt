@@ -1,15 +1,14 @@
 package com.example.app
-
+import HomeScreen
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.example.app.presentation.initial.InitialScreen
-import com.example.app.presentation.login.LoginScreen
-import com.example.app.presentation.signup.SignUpScreen
+import com.example.app.view.contactemergency.AddContactScreen
+import com.example.app.view.initial.InitialScreen
+import com.example.app.view.login.LoginScreen
+import com.example.app.view.signup.SignUpScreen
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.FirebaseFirestore
-import com.example.app.presentation.home.HomeScreen
 
 
 @Composable
@@ -24,13 +23,21 @@ fun NavigationWrapper(
                 navigateToSignUp = { navHostController.navigate("signUp") })
         }
         composable("logIn") {
-            LoginScreen(auth){ navHostController.navigate("home") }
+            LoginScreen { navHostController.navigate("home") }
         }
         composable("signUp") {
-            SignUpScreen(auth)
+            SignUpScreen{ navHostController.navigate("home") }
         }
         composable("home"){
-            HomeScreen()
+            HomeScreen(navigateToContact = {navHostController.navigate("contactemergency")})
+        }
+        composable("contactemergency"){
+            AddContactScreen { navHostController.navigate("home")}
+        }
+
         }
     }
-}
+
+
+
+

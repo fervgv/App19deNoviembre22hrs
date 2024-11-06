@@ -54,7 +54,7 @@ android {
 }
 // Allow references to generated code
 kapt {
-    correctErrorTypes = true
+    this.correctErrorTypes = true
 }
 
 
@@ -85,9 +85,24 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    implementation("com.google.dagger:hilt-android:2.44")
+    implementation("com.google.dagger:hilt-android:2.52")
+
+
     implementation ("androidx.hilt:hilt-navigation-compose:1.2.0")
-    kapt("com.google.dagger:hilt-compiler:2.47")
+    kapt("com.google.dagger:hilt-compiler:2.52")
+    implementation ("com.google.maps.android:maps-compose:4.4.1")
+    implementation ("com.google.android.gms:play-services-maps:19.0.0")
+    implementation("androidx.compose.material:material:1.7.5") // O la última versión
+    // Google Play Services for Location
+    implementation("com.google.android.gms:play-services-location:21.3.0")
+
+    // Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
+
+
+
+
 
 
 }

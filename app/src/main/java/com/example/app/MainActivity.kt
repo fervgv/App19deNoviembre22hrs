@@ -10,12 +10,13 @@ import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.example.app.ui.theme.AppTheme
+import com.example.app.view.ui.theme.AppTheme
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import javax.inject.Inject
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 
 class MainActivity : ComponentActivity() {
 
@@ -51,10 +52,3 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
-
-
-
-
-
-

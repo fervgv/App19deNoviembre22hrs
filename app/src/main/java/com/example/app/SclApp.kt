@@ -1,20 +1,12 @@
 package com.example.app
 
 import android.app.Application
-import android.content.Context
 import dagger.hilt.android.HiltAndroidApp
-
-
-
-class SclApp : Application(){
-    companion object {
-        lateinit var context: Context
-    }
-
+//Clase aplication primera en llamarse al inicializar la app
+@HiltAndroidApp
+class SclApp : Application() {
     override fun onCreate() {
         super.onCreate()
-        context = this
+        // No es necesario asignar context manualmente
     }
-
 }
-
