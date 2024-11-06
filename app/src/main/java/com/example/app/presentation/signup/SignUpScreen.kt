@@ -56,12 +56,12 @@ fun SignUpScreen(auth: FirebaseAuth) {
                 contentDescription = "",
                 tint = Color.White,
                 modifier = Modifier
-                    .padding(vertical = 24.dp)
-                    .size(24.dp)
+                    .padding(vertical = 12.dp)
+                    .size(12.dp)
             )
             Spacer(modifier = Modifier.weight(1f))
         }
-        Text("Nombre", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 40.sp)
+        Text("Nombre", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 20.sp)
         TextField(
             value = nombre,
             onValueChange = { nombre = it },
@@ -73,7 +73,7 @@ fun SignUpScreen(auth: FirebaseAuth) {
         )
         Spacer(Modifier.height(48.dp))
 
-        Text("Email", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 40.sp)
+        Text("Email", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 20.sp)
         TextField(
             value = email,
             onValueChange = { email = it },
@@ -86,7 +86,7 @@ fun SignUpScreen(auth: FirebaseAuth) {
         Spacer(Modifier.height(48.dp))
 
 
-        Text("Contraseña", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 40.sp)
+        Text("Contraseña", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 20.sp)
         TextField(
             value = contrasena, onValueChange = { contrasena = it },
             modifier = Modifier.fillMaxWidth(),
@@ -96,7 +96,7 @@ fun SignUpScreen(auth: FirebaseAuth) {
             )
         )
         Spacer(Modifier.height(48.dp))
-        Text("Confirmar contrasena ", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 40.sp)
+        Text("Confirmar contrasena ", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 20.sp)
         TextField(
             value = confcontrasena, onValueChange = { confcontrasena = it },
             modifier = Modifier.fillMaxWidth(),
@@ -106,7 +106,7 @@ fun SignUpScreen(auth: FirebaseAuth) {
             )
         )
         Spacer(Modifier.height(48.dp))
-        Text("Nummero de telefono ", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 40.sp)
+        Text("Nummero de telefono ", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 20.sp)
         TextField(
             value = telefono, onValueChange = { telefono = it },
             modifier = Modifier.fillMaxWidth(),

@@ -11,11 +11,11 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.example.app.presentation.home.HomeScreen
 
+
 @Composable
 fun NavigationWrapper(
     navHostController: NavHostController,
-    auth: FirebaseAuth,
-
+    auth: FirebaseAuth
 ) {
 
     NavHost(navController = navHostController, startDestination = "initial") {
